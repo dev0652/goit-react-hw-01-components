@@ -1,9 +1,9 @@
 import { Description } from './Description';
 import { Stats } from './Stats';
 
-export const Profile = () => (
+export const Profile = ({ user }) => (
   <>
-    <Description />
-    <Stats />
+    <Description user={user} />
+    <Stats user={user.stats} />
   </>
 );
