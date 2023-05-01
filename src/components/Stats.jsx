@@ -1,9 +1,9 @@
-export const Stats = ({ stats }) => {
-  const spreadedStats = [...stats];
+export const Stats = ({ userStats }) => {
+  const spreadStats = [...stats];
 
   return (
     <ul className="stats">
-      {spreadedStats.map((stat, index) => {
+      {spreadStats.map((stat, index) => {
         return (
           <li key={stat.tag}>
             <span className="label">{stat[index]}</span>
