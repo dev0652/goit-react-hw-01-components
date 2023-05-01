@@ -1,13 +1,15 @@
-export const Stats = ({ userStats }) => {
-  const spreadStats = [...stats];
+export const Stats = ({ stats }) => {
+  const entries = Object.entries(stats);
 
   return (
     <ul className="stats">
-      {spreadStats.map((stat, index) => {
+      {entries.map(entry => {
+        let counter = 0;
+
         return (
-          <li key={stat.tag}>
-            <span className="label">{stat[index]}</span>
-            <span className="quantity">{stat.index(stats[index])}</span>
+          <li key={(counter += 1)}>
+            <span className="label">{entry[0]}</span>
+            <span className="quantity">{entry[1]}</span>
           </li>
         );
       })}
