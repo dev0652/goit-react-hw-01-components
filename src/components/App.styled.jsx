@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 
 export const Page = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 
-padding: 40px;
+  /* height: 100vh; */
+  padding: 40px;
 
-height: '100vh',
-display: 'flex',
-justifyContent: 'center',
-alignItems: 'center',
-fontSize: 40,
-color: '#010101',
+  // font-size: 40px;
+  color: #010101;
+  background-color: #dfe3ee;
 `;

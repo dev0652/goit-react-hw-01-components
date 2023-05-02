@@ -6,19 +6,17 @@ import {
   Description,
   Avatar,
   Name,
-  Tag,
-  Location,
+  SecondaryInfo,
 } from './Profile.styled';
 
-export const Profile = ({
-  user: { avatar, username, tag, location, stats },
-}) => (
+export const Profile = ({ avatar, username, tag, location, stats }) => (
   <ProfileWrapper>
+    <Avatar src={avatar} alt={`Avatar of ${username}`} />
+
     <Description>
-      <Avatar src={avatar} alt={`Avatar of ${username}`} />
       <Name>{username}</Name>
-      <Tag>@{tag}</Tag>
-      <Location>{location}</Location>
+      <SecondaryInfo>@{tag}</SecondaryInfo>
+      <SecondaryInfo>{location}</SecondaryInfo>
     </Description>
 
     <Stats stats={stats} />
@@ -30,5 +28,5 @@ Profile.propTypes = {
   username: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-  stats: PropTypes.objectOf(PropTypes.string),
+  stats: PropTypes.objectOf(PropTypes.number),
 };

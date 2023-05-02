@@ -1,17 +1,37 @@
 import { Profile } from './task1/Profile/Profile';
 import { Statistics } from './task2/Statistics/Statistics';
+import { FriendList } from './task3/FriendList/FriendList';
+
 import user from './task1/user.json';
-import stats from './task2/data.json';
+import data from './task2/data.json';
+import friends from './task3/friends.json';
+
 import { Page } from './App.styled';
 
 // ####################################
 
 export const App = () => {
+  const { avatar, username, tag, location, stats: profileStats } = user;
+
   return (
     <Page>
-      <Profile user={user} />
+      {/* Task 1 */}
+      <Profile
+        username={username}
+        tag={tag}
+        location={location}
+        avatar={avatar}
+        stats={profileStats}
+      />
 
-      <Statistics stats={stats} title="Upload stats" />
+      {/* Task 2 */}
+      <Statistics title="Upload stats" stats={data} />
+      <Statistics stats={data} />
+
+      {/* Task 3 */}
+      <FriendList friends={friends} />
+
+      {/* Task 4 */}
     </Page>
   );
 };
