@@ -1,12 +1,12 @@
-import { Profile } from './task1/Profile/Profile';
-import { Statistics } from './task2/Statistics/Statistics';
-import { FriendList } from './task3/FriendList/FriendList';
-import { TransactionHistory } from './task4/TransactionHistory/TransactionHistory';
+import { Profile } from '../Profile/Profile';
+import { Statistics } from '../Statistics/Statistics';
+import { FriendList } from '../FriendList/FriendList';
+import { TransactionHistory } from '../TransactionHistory/TransactionHistory';
 
-import user from './task1/user.json';
-import data from './task2/data.json';
-import friends from './task3/friends.json';
-import transactions from './task4/transactions.json';
+import user from '../../data/user.json';
+import data from '../../data/data.json';
+import friends from '../../data/friends.json';
+import transactions from '../../data/transactions.json';
 
 import { Page } from './App.styled';
 

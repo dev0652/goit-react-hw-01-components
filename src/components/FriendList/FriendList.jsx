@@ -5,7 +5,12 @@ import { List } from './FriendList.styled';
 export const FriendList = ({ friends }) => (
   <List>
     {friends.map(({ avatar, name, isOnline, id }) => (
-      <FriendListItem avatar={avatar} name={name} isOnline={isOnline} id={id} />
+      <FriendListItem
+        avatar={avatar}
+        name={name}
+        isOnline={isOnline}
+        key={id}
+      />
     ))}
   </List>
 );
@@ -17,6 +22,6 @@ FriendList.propTypes = {
       name: PropTypes.string.isRequired,
       isOnline: PropTypes.bool.isRequired,
       id: PropTypes.number.isRequired,
-    })
-  ),
+    }).isRequired
+  ).isRequired,
 };
