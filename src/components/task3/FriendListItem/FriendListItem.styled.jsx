@@ -8,6 +8,8 @@ export const ListItem = styled.li`
   background-color: white;
   padding: 10px;
   border-radius: 4px;
+
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
 `;
 
 export const Status = styled.span`

@@ -1,10 +1,12 @@
 import { Profile } from './task1/Profile/Profile';
 import { Statistics } from './task2/Statistics/Statistics';
 import { FriendList } from './task3/FriendList/FriendList';
+import { TransactionHistory } from './task4/TransactionHistory/TransactionHistory';
 
 import user from './task1/user.json';
 import data from './task2/data.json';
 import friends from './task3/friends.json';
+import transactions from './task4/transactions.json';
 
 import { Page } from './App.styled';
 
@@ -32,6 +34,7 @@ export const App = () => {
       <FriendList friends={friends} />
 
       {/* Task 4 */}
+      <TransactionHistory items={transactions} />
     </Page>
   );
 };

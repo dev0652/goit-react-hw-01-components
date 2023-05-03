@@ -13,6 +13,8 @@ export const ProfileWrapper = styled.div`
   border-radius: 4px;
   overflow: hidden;
   background-color: white;
+
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
 `;
 
 export const Description = styled.div`
