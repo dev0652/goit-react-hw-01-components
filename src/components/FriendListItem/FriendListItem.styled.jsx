@@ -5,11 +5,11 @@ export const ListItem = styled.li`
   align-items: center;
   gap: 10px;
 
-  background-color: white;
+  background-color: ${p => p.theme.colors.white};
   padding: 10px;
   border-radius: 4px;
 
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: ${p => p.theme.boxShadow};
 `;
 
 export const Status = styled.span`
@@ -18,7 +18,8 @@ export const Status = styled.span`
   width: 1rem;
   border-radius: 50%;
 
-  background-color: ${({ status }) => (status === 'online' ? 'green' : 'red')};
+  background-color: ${({ status }) =>
+    status === 'online' ? p => p.theme.colors.green : p => p.theme.colors.red};
 `;
 
 export const Avatar = styled.img`

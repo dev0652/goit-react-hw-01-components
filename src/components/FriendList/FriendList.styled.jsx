@@ -3,6 +3,6 @@ import styled from 'styled-components';
 export const List = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: ${p => p.theme.spacing(1)};
   width: 280px;
 `;

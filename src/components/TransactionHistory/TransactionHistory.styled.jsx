@@ -4,33 +4,33 @@ export const Table = styled.table`
   border-collapse: collapse;
   width: 50%;
   font-size: 0.8rem;
-  color: gray;
+  color: ${p => p.theme.colors.gray};
 
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: ${p => p.theme.boxShadow};
 `;
 
 export const Row = styled.tr`
   :nth-child(odd) {
-    background-color: #f7f7f7;
+    background-color: ${p => p.theme.colors.bgLight};
   }
 
   :hover {
-    background-color: PowderBlue;
+    background-color: ${p => p.theme.colors.table.rowHover};
   }
 `;
 
 export const HeaderCell = styled.th`
-  border: 1px solid lightgray;
+  border: 1px solid ${p => p.theme.colors.lightGray};
   padding: 10px 0;
-  background-color: #3ac3d6;
-  color: white;
+  background-color: ${p => p.theme.colors.table.header};
+  color: ${p => p.theme.colors.white};
   text-transform: uppercase;
   font-size: 0.5rem;
   letter-spacing: 0.06rem;
 `;
 
 export const Cell = styled.td`
-  border: 1px solid lightgray;
+  border: 1px solid ${p => p.theme.colors.lightGray};
   text-align: center;
   padding: 10px 0;
 

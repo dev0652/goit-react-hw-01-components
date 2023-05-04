@@ -3,15 +3,9 @@ import styled from 'styled-components';
 export const StatisticsWrapper = styled.section`
   width: 280px;
 
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: center;
-  //   gap: 30px;
-  //   padding-top: 30px;
-
   border-radius: 4px;
   overflow: hidden;
-  background-color: white;
+  background-color: ${p => p.theme.colors.white};
 `;
 
 export const Title = styled.h2`
@@ -21,25 +15,24 @@ export const Title = styled.h2`
   text-align: center;
   font-size: 1rem;
 
-  color: gray;
-  background-color: #f7f7f7;
+  color: ${p => p.theme.colors.gray};
+  background-color: ${p => p.theme.colors.bgLight};
 `;
 
 export const List = styled.ul`
   display: flex;
-  background: beige;
 `;
 
 export const ListItem = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: ${p => p.theme.spacing(1)};
   flex-basis: calc(100% / ${props => props.count});
-  color: white;
+  color: ${p => p.theme.colors.white};
 
   --thickness: 0.5px;
-  --color: gray;
+  --color: ${p => p.theme.colors.gray};
   text-shadow: calc(var(--thickness) * -1) calc(var(--thickness) * -1) 0
       var(--color),
     var(--thickness) calc(var(--thickness) * -1) 0 var(--color),
